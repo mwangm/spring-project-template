@@ -1,0 +1,18 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: StarKey
+  profiles:
+    active: local
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true

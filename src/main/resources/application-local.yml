@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/key-order
+    username: root
+    password: password
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
