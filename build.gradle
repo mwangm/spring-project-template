@@ -37,7 +37,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation('com.h2database:h2')
     testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '1.7.3'
-    testImplementation group: 'org.powermock', name: 'powermock-api-mockito', version: '1.7.3'
+    testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '1.7.3'
 }
 
 dependencyManagement {
