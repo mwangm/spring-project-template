@@ -1,0 +1,7 @@
+dependencyCheck {
+    suppressionFile = "${projectDir}/dependency-check-suppress.xml"
+    autoUpdate = true
+}
+
+//check.dependsOn dependencyCheckAnalyze
+

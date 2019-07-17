@@ -1,9 +1,11 @@
 plugins {
     id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'org.owasp.dependencycheck' version '5.1.1'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id "org.sonarqube" version "2.7.1"
+    id 'jacoco'
     id 'java'
 }
-
-apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -29,6 +31,7 @@ dependencies {
     implementation 'io.springfox:springfox-swagger2:2.9.2'
     implementation 'io.springfox:springfox-swagger-ui:2.9.2'
     implementation 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor("org.projectlombok:lombok:1.18.8")
 
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -43,12 +46,8 @@ dependencyManagement {
     }
 }
 
-//apply from: "${rootProject.projectDir}/gradle/idea.gradle"
-//apply from: "${rootProject.projectDir}/gradle/docker-compose/docker-compose.gradle"
-//apply from: "${rootProject.projectDir}/gradle/dependency-check/dependency-check.gradle"
-//apply from: "${rootProject.projectDir}/gradle/spotbugs/spotbugs.gradle"
-//apply from: "${rootProject.projectDir}/gradle/checkstyle/checkstyle.gradle"
-//apply from: "${rootProject.projectDir}/gradle/git-hooks/git-hooks.gradle"
-//apply from: "${rootProject.projectDir}/gradle/version-info.gradle"
-//apply from: "${rootProject.projectDir}/gradle/jacoco.gradle"
-////apply from: "${rootProject.projectDir}/gradle/sonarqube.gradle"
+apply from: "${rootProject.projectDir}/gradle/idea.gradle"
+apply from: "${rootProject.projectDir}/gradle/dependency-check/dependency-check.gradle"
+apply from: "${rootProject.projectDir}/gradle/checkstyle/checkstyle.gradle"
+apply from: "${rootProject.projectDir}/gradle/jacoco.gradle"
+apply from: "${rootProject.projectDir}/gradle/sonarqube.gradle"
