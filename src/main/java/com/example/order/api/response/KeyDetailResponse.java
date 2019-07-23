@@ -1,9 +1,7 @@
 package com.example.order.api.response;
 
 import com.example.order.domain.Key;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
 import lombok.Value;
 
 @Value

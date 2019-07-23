@@ -19,5 +19,4 @@ public class Key extends EntityBase {
 
     @Column
     private String type;
-
 }
